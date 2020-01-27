@@ -3,5 +3,9 @@ body {
 }
 
 h1 {
-    color:#eeeeee;
+    color:#94ff85;
+}
+
+div.card-header {
+    font-size: 25px;
 }

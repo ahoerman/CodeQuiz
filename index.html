@@ -16,7 +16,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Code Quiz</a>
+        <a class="navbar-brand" href="index.html">Code Quiz</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,22 +29,26 @@
             </ul>
         </div>
     </nav>
-    
+    <div class="timer" style="display: none;">
     <h1 id="timer" class="d-flex justify-content-center mt-4">100</h1>
+    </div>
+
+    <div class="score"></div>
+
     <div class="row justify-content-center">
-        <button type="button" id="startBtn" class="btn-lg btn-success mt-2">Start Quiz</button>
+        <button type="button" id="startBtn" class="btn-lg btn-success mt-5">Start Quiz</button>
     </div>
     
     <div class="container mt-4 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
-            <div id="question" class="card-header">
+        <div class="card" style="width: 28rem; display: none;">
+            <div id="question" class="card-header text-white bg-success">
                 
             </div>
             <ul class="list-group list-group-flush">
-                <li id="a" data-value="a" class="answerBtn list-group-item"></li>
-                <li id="b" data-value="b" class="answerBtn list-group-item"></li>
-                <li id="c" data-value="c" class="answerBtn list-group-item"></li>
-                <li id="d" data-value="d" class="answerBtn list-group-item"></li>
+                <li id="a" class="answerBtn list-group-item"></li>
+                <li id="b" class="answerBtn list-group-item"></li>
+                <li id="c" class="answerBtn list-group-item"></li>
+                <li id="d" class="answerBtn list-group-item"></li>
             </ul>
         </div>
     </div>
