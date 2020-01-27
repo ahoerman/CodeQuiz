@@ -10,7 +10,7 @@ The application starts with just a start button on the page.
 ![Start Button](/assets/startImg.png)
 
 
-Once the Start button is pressed, a timer will start and the user will be asked a series of 5 questions. If the user answers wrong, 10 seconds will be deducted from the timer. However many seconds are left once the user is done answering every question is the user's final score. 
+Once the Start button is pressed, a timer will start and the user will be asked a series of 4 questions. If the user answers wrong, 10 seconds will be deducted from the timer. However many seconds are left once the user is done answering every question is the user's final score. 
 
 ![Start Button](/assets/questionCard.png)
 
