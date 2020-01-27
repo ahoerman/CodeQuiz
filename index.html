@@ -30,7 +30,7 @@
         </div>
     </nav>
     <div class="timer" style="display: none;">
-    <h1 id="timer" class="d-flex justify-content-center mt-4">100</h1>
+        <h1 id="timer" class="d-flex justify-content-center mt-4">100</h1>
     </div>
 
     <div class="score"></div>
@@ -38,11 +38,11 @@
     <div class="row justify-content-center">
         <button type="button" id="startBtn" class="btn-lg btn-success mt-5">Start Quiz</button>
     </div>
-    
+
     <div class="container mt-4 d-flex justify-content-center">
-        <div class="card" style="width: 28rem; display: none;">
+        <div class="card questions" style="width: 28rem; display: none;">
             <div id="question" class="card-header text-white bg-success">
-                
+
             </div>
             <ul class="list-group list-group-flush">
                 <li id="a" class="answerBtn list-group-item"></li>
@@ -52,8 +52,23 @@
             </ul>
         </div>
     </div>
-    
-<script src="assets/script.js"></script>
+
+    <div class="scoreSave" style="display: none;">
+        <form class="d-flex justify-content-center">
+            <input type="initials" class="form-control mr-2 playerName" id="inputPassword2"
+                style="width: 15rem; display: inline;" placeholder="Enter Player Initials Here!">
+            <button type="button" class="btn btn-success saveBtn">Save Score!</button>
+        </form>
+        <div class="card mr-auto ml-auto mt-5" style="width: 18rem;">
+            <div class="card-header d-flex justify-content-center text-white bg-success">
+                Highscores!
+            </div>
+            <ul class="list-group list-group-flush highScores">
+            </ul>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
 
 </body>
 

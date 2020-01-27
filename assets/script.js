@@ -42,18 +42,14 @@ function getQuestion() {
         $("#d").text(q.answers[3]);
     }
     else {
-        $(".card").hide();
+        $(".questions").hide();
         $(".timer").hide();
         let score = $("<h1>");
-        score.text("Final Score: " + timestart).attr("class", "d-flex justify-content-center mt-5");
+        score.text(timestart).attr("class", "d-flex justify-content-center mt-5 finalScore");
         $(".score").append(score);
-        //end game
+        $(".scoreSave").show();
     }
 }
-
-//grab text value for user guess
-//figure out if it matches correct answer
-
 
 function answerChoice(event) {
     let q = questions[questionNum];
@@ -63,21 +59,33 @@ function answerChoice(event) {
         questionNum++;
         getQuestion();
     }
-    else{
+    else {
         timestart -= penalty;
         questionNum++;
         getQuestion();
     }
 }
 
+function saveScore() {
+    let score = $(".finalScore").text();
+    let name = $(".playerName").val();
+    let newScore = $("<div>");
+    newScore.attr("class","d-flex justify-content-around")
+    $(".highScores").append(newScore);
+    newScore.append($("<p>").text(name).attr("class","scoreName"));
+    newScore.append($("<p>").text(score).attr("class","scoreNum"));
+    $(".playerName").hide();
+    $(".saveBtn").hide();
+}
 
 
+$(".saveBtn").on("click", saveScore);
 $("li.answerBtn").on("click", answerChoice);
 $("#startBtn").on("click", function () {
     quizTimer();
     getQuestion();
     $(this).hide();
-    $(".card").show();
+    $(".questions").show();
     $(".timer").show();
 });
 

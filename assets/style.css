@@ -6,6 +6,17 @@ h1 {
     color:#94ff85;
 }
 
+p.scoreName {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+p.scoreNum {
+    font-size: 25px;
+    color:#4b4b4b;
+
+}
+
 div.card-header {
     font-size: 25px;
 }
