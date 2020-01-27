@@ -76,6 +76,15 @@ function saveScore() {
     newScore.append($("<p>").text(score).attr("class","scoreNum"));
     $(".playerName").hide();
     $(".saveBtn").hide();
+    localStorage.setItem("highScore", score);
+    localStorage.setItem("highName", name);
+}
+
+function getHighScores(){
+ let highScore = localStorage.getItem("highScore");
+ let highScoreName = localStorage.getItem("highName");
+    $(".scoreNum").text(highScore);
+    $(".scoreName").text(highScoreName);
 }
 
 
@@ -88,6 +97,3 @@ $("#startBtn").on("click", function () {
     $(".questions").show();
     $(".timer").show();
 });
-
-
-
